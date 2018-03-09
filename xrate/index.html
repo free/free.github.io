@@ -6,6 +6,7 @@
 <a href="Grafana%20%2D%20xrate%20%2D%20no%20range%20adjust%2C%20smooth%20counter%2C%20series%20end.png">Smooth counter, series end</a><br>
 <a href="Grafana%20%2D%20xrate%20%2D%20no%20range%20adjust%2C%20step%20counter%2C%20series%20start.png">Step counter, series start</a><br>
 <a href="Grafana%20%2D%20xrate%20%2D%20no%20range%20adjust%2C%20step%20counter%2C%20series%20end.png">Step counter, series end</a><br>
+
 <h2>xrate() V2, only adjust fully covered range</h2>
 <p>The value is only adjusted (multiplied by requested range, divided by actually sampled range) when the whole range is covered by data points
   (i.e. when the first point is before the start of the range and the last point is less than average point interval away from the end).
@@ -15,6 +16,13 @@
 <a href="Grafana%20%2D%20xrate%20%2D%20only%20adjust%20fully%20covered%20range%2C%20smooth%20counter%2C%20series%20end.png">Smooth counter, series end</a><br>
 <a href="Grafana%20%2D%20xrate%20%2D%20only%20adjust%20fully%20covered%20range%2C%20step%20counter%2C%20series%20start.png">Step counter, series start</a><br>
 <a href="Grafana%20%2D%20xrate%20%2D%20only%20adjust%20fully%20covered%20range%2C%20step%20counter%2C%20series%20end.png">Step counter, series end</a><br>
+<h3>Simulated rolling restart</h3>
+<p>Using <a href="http://github.com/beorn7/rrsim">http://github.com/beorn7/rrsim</a>.</p>
+<a href="Grafana%20%2D%20xrate%20rrsim.png">Smooth counter (--qps=10)</a><br>
+<a href="Grafana%20%2D%20xrate%20rrsim%20j1.png">Smooth counter (--qps=10), --jitter=1</a><br>
+<a href="Grafana%20%2D%20xrate%20rrsim%205s.png">Step counter (--qps=0.2)</a><br>
+<a href="Grafana%20%2D%20xrate%20rrsim%205s%20j1.png">Step counter (--qps=0.2), --jitter=1</a><br>
+
 <h2>xrate() V3, full adjust (like rate)</h2>
 <p>The value is always adjusted by the ratio of requested to sampled range. This is the same as (V2) when the whole range is covered; it
   interpolates the value at the start of the range if the series begins before the range but ends inside the range; and it extrapolates to
