@@ -12,3 +12,7 @@ No line break here
 
 This is [a link
 with a line break](http://google.com) in it.
+
+* and a bullet point
+with a newline in it
+* followed by a second bullet point
