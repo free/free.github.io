@@ -9,3 +9,6 @@
 9 Line break with `<br>` tag<br>
 10 Line break with `[ ]<br>` tag <br>
 No line break here
+
+This is [a link
+with a line break](http://google.com) in it.
