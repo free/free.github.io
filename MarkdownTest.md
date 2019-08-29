@@ -16,3 +16,7 @@ with a line break](http://google.com) in it.
 * and a bullet point
 with a newline in it
 * followed by a second bullet point
+  with a newline and 2 space indentation
+* followed by a third bullet point
+    with a newline and 4 space indentation
+* followed by a fourth bullet point
